@@ -5,7 +5,8 @@
 
 		<section id="container">
 			<div ><h3>A <%= @idea.app.name%> for <%= @idea.audience.name%></h3></div>
-			<button>I like this idea</button>
+			<button>I like This Idea</button>
+			<%= button_to "Give me another idea", root_path, :method => :get %>
 		</section>
 
 	</div>

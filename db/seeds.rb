@@ -28,6 +28,6 @@ apps = App.create([{name:"Facebook"},
 {name:"FourSquare"},
 {name:"Venmo"}])
 
-audiences = Audience.create([{name:"GA students"},{name:"homeless"},{name:"people with T-rex arms"},{name:"drug dealer"},{name:"Amish"}])
+audiences = Audience.create([{name:"GA students"},{name:"homeles people"},{name:"people with T-rex arms"},{name:"drug dealers"},{name:"Amish"}])
 
 Idea.create(app:App.order("RANDOM()").first, audience:Audience.order("RANDOM()").first)

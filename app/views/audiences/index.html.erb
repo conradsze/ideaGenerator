@@ -1,3 +1,11 @@
 <% @audiences.each do |audience| %>
-	<h3><%= audience.name.titleize %></h3>
+<%= form_for audience do |f| %>
+
+  <div class="col-md-6">
+
+    <%= f.text_field :name, class: "form-control" %>
+
+ <%= f.submit "edit an audience!", :style => "display: none;"  %>
+  </div>
+<% end %> 
 <% end %>

@@ -1,3 +1,13 @@
 <% @apps.each do |app| %>
-	<h3><%= app.name.titleize %></h3>
+
+<%= form_for app do |f| %>
+
+  <div class="col-md-6">
+
+    <%= f.text_field :name, class: "form-control" %>
+
+ <%= f.submit "edit an app!", :style => "display: none;"  %>
+  </div>
+<% end %> 
+
 <% end %>

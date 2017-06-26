@@ -1,11 +1,15 @@
 
 		<div id="top">
-			<H1>Project Topic Generator v3.1</H1>
+			<H1>Project Topic Generator v3.3</H1>
 		</div>
 
 		<section id="container">
-			<div ><h2><%= @idea.app.name.titleize%> for <%= @idea.audience.name%></h2></div>
-			<button>I Like This Idea</button>
+			<div ><h2><%= @idea.app.name.titleize%> for <%= @idea.audience.name%></h2>
+			</div>
+            
+            <%= link_to image_tag("https://d30y9cdsu7xlg0.cloudfront.net/png/100266-200.png", size: "50x50", alt: "Edit Entry"), ideas_path(:audience_id => @idea.audience.id, :app_id => @idea.app.id), :method => :post %>
+<br>
+<br>
 			<%= button_to "Give me another idea", root_path, :method => :get %>
 		</section>
 

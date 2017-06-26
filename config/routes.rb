@@ -10,8 +10,12 @@ Rails.application.routes.draw do
 
   get 'apps/' => 'apps#index', as: :apps
   post 'apps/' => 'apps#create'
+  patch 'apps/:id' => 'apps#update', as: :app
   get 'audiences/' => 'audiences#index', as: :audiences
   post 'audiences/' => 'audiences#create'
+  patch 'audiences/:id' => 'audiences#update', as: :audience
+
+  get 'ideas/' => 'ideas#index', as: :ideas
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

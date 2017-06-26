@@ -1,4 +1,8 @@
 class AudiencesController < ApplicationController
+	def index
+		@audiences = Audience.all
+	end
+
 	def create
 		@audience = Audience.new(params.require(:audience).permit(:name, :age))
 		if @audience.save 

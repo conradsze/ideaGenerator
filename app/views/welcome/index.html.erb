@@ -1,12 +1,33 @@
-	<div id="whole">
+
 		<div id="top">
 			<H1>Project Topic Generator v3.0</H1>
 		</div>
 
 		<section id="container">
-			<div ><h3>A <%= @idea.app.name%> for <%= @idea.audience.name%></h3></div>
+			<div ><h2><%= @idea.app.name.titleize%> for <%= @idea.audience.name%></h2></div>
 			<button>I like This Idea</button>
 			<%= button_to "Give me another idea", root_path, :method => :get %>
 		</section>
 
-	</div>
+<%= form_for @app do |f| %>
+
+  <div class="col-md-2 col-md-offset-3"">
+
+    <%= f.text_field :name %>
+
+ <%= f.submit "Add an app!" %>
+  </div>
+<% end %> 
+
+
+<%= form_for @audience do |f| %>
+
+  <div class="col-md-2 col-md-offset-2">
+
+    <%= f.text_field :name %>
+
+ <%= f.submit "Add an audience!" %>
+  </div>
+<% end %> 
+
+

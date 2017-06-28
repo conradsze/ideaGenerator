@@ -1,11 +1,13 @@
 <% @audiences.each do |audience| %>
 <%= form_for audience do |f| %>
-
-  <div class="col-md-6">
-
-    <%= f.text_field :name, class: "form-control" %>
-
- <%= f.submit "edit an audience!", :style => "display: none;"  %>
+  <div class="col-md-6 form-group">
+	<div class="col-md-10" >
+    	<%= f.text_field :name, class: "form-control" %>
+    </div>
+	<div class="col-md-2 col-form-label">
+		<%= link_to("x", audience_path(audience), data: {method: :delete, confirm: "You sure?"}) %>
+	</div>
+	<%= f.submit "edit an audience!", :style => "display: none;"  %>
   </div>
 <% end %> 
 <% end %>

@@ -19,4 +19,12 @@ class AudiencesController < ApplicationController
 		redirect_to audiences_path
 		
 	end
+	def destroy
+		@audience = Audience.find(params[:id])
+		@audience.ideas.destroy_all
+		@audience.destroy
+		
+		redirect_to audiences_path
+		
+	end
 end

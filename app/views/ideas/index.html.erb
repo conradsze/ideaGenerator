@@ -1,3 +1,6 @@
 <% @ideas.each do |idea| %>
-	<h2><%= idea.app.name.titleize%> for <%= idea.audience.name%></h2>
+	<h2>
+		<%= idea.app.name.titleize%> for <%= idea.audience.name%>
+		<span><%= link_to("x", idea_path(idea), method: :delete, data: {confirm: "I believe this is a terriable idea, and this app should never be made"}) %></span>
+	</h2>
 <% end %>
